@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="307dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorAccent"
+        android:text="I love it!!"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></Button>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="422dp"
+        android:layout_height="488dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/catpic"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/catnamee"
+                android:layout_width="225dp"
+                android:layout_height="53dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="103dp"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="384dp"
+                android:layout_height="86dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="12dp"
+                android:text="TextView"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/catnamee" />
+
+            <TextView
+                android:id="@+id/origin2"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Origin："
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Life_span"></TextView>
+
+            <TextView
+                android:id="@+id/origin"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Life_span"></TextView>
+
+            <TextView
+                android:id="@+id/origin3"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:text="Temperament："
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Life_span"></TextView>
+
+            <TextView
+                android:id="@+id/Temperament"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/origin"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:text="Life-span:"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imperial"></TextView>
+
+            <TextView
+                android:id="@+id/Life_span"
+                android:layout_width="386dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:text="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Life_span"></TextView>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="320dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="4dp"
+                android:text="Imperial:"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Wikipedia_url" />
+
+            <TextView
+                android:id="@+id/imperial"
+                android:layout_width="318dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="5dp"
+                android:text="Imperical"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/Wikipedia_url" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="377dp"
+                android:layout_height="29dp"
+                android:text="Matrix"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/matrix"
+                android:layout_width="356dp"
+                android:layout_height="33dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="391dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="3dp"
+                android:text="friendliness level"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/friendliness"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="16dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Temperament"></TextView>
+
+            <TextView
+                android:id="@+id/Wikipedia_url"
+                android:layout_width="385dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="14dp"
+                android:gravity="left"
+                android:paddingLeft="0dp"
+                android:text="@string/app_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/desc"></TextView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
