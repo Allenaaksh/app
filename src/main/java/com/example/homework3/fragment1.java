@@ -28,7 +28,7 @@ public class fragment1 extends Fragment {
 // do something on text submit
                 Context context = getContext();
                 CharSequence query1 = searchView.getQuery();
-                Intent intent = new Intent(context, searchresultintent.class);
+                Intent intent = new Intent(context, SearchResultIntent.class);
                 intent.putExtra("query_name", query);
                 //System.out.println(query1);
                 startActivity(intent);

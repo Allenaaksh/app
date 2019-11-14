@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class catdetail extends AppCompatActivity {
+public class Catdetail extends AppCompatActivity {
 
 
     public static ArrayList<Catimage> list1 = new ArrayList<>();
@@ -64,7 +64,6 @@ public class catdetail extends AppCompatActivity {
         final String breedsid = intent.getStringExtra("breedsid");
         final RequestQueue requestQueue = Volley.newRequestQueue(this);
         String url = "https://api.thecatapi.com/v1/images/search?breed_id=" + breedsid;
-        String url2 = "https://api.thecatapi.com/v1/breeds/search?q=" + breedsid;
         try {
             Response.Listener<String> responseListener = new Response.Listener<String>() {
                 @Override
@@ -81,7 +80,7 @@ public class catdetail extends AppCompatActivity {
                     }
 
                     imperical.setText(objectList.get(0).getBreeds().get(0).getResult().getImperial());
-////
+
                     metric.setText(objectList.get(0).getBreeds().get(0).getResult().getMetric());
 
                     catname.setText(objectList.get(0).getBreeds().get(0).getName());

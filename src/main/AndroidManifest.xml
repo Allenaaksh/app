@@ -17,8 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".searchresultintent"
+        <activity android:name=".SearchResultIntent"
 ></activity>
-    <activity android:name=".catdetail"></activity></application>
+    <activity android:name=".Catdetail"></activity></application>
 
 </manifest>

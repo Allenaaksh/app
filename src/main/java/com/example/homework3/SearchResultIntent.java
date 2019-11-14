@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class searchresultintent extends AppCompatActivity {
+public class SearchResultIntent extends AppCompatActivity {
 
     private TextView textView;
     private RecyclerView recyclerView;
@@ -52,48 +52,8 @@ public class searchresultintent extends AppCompatActivity {
                 List<Breeds> objectList = Arrays.asList(enums);
                 Intent intent = getIntent();
 
-//                AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "database_name").allowMainThreadQueries().build();
 //
-//                //inserting each book object into the database if the db does not exist
-//                if(db.bookDao().getCount() == 0) {
-//                    for (int i = 0; i < objectList.size(); i++) {
-//                        Breeds breeds = objectList.get(i);
-//                        db.bookDao().insert(breeds);
-//                    }
-//                }
-                // List<Breeds> list1= fragment1.objectList;
-
-                //Breeds breeds = new Breeds();
-                //Intent intent = getIntent();
-                // List<Breeds> list1= fragment1.objectList;
-
-                // Breeds breeds = new Breeds();
-//
-//                String name = intent.getStringExtra("query_name");
-//                System.out.println(name+"this  is name");
-//                System.out.println(objectList.get(1).getName());
-
-
-                System.out.println(intent.getStringExtra("query_name"));
-
-//                for (int i = 0; i < objectList.size(); i++) {
-//
-//                    if (intent.getStringExtra("query_name").equals(objectList.get(i).getName())) {
-//                        System.out.println("did it");
-//                        System.out.println(intent.getStringExtra("query_name"));
-//
-//                        list2.add(objectList.get(i));
-//                    }
-//                   // System.out.println(list2.get(0).getAlt_names());
-//
-//
-//
-//
-//                }
-
-
-
-                searchadapter searchadpater = new searchadapter();
+                SearchResultAdapter searchadpater = new SearchResultAdapter();
                 recyclerView.setAdapter(searchadpater);
                 searchadpater.setData(objectList);
 

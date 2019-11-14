@@ -13,9 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class searchadapter extends RecyclerView.Adapter<searchadapter.searchViewHolder> {
+public class SearchResultAdapter extends RecyclerView.Adapter<SearchResultAdapter.searchViewHolder> {
 
-    public   List<Breeds> breedsToAdapt;
+    public List<Breeds> breedsToAdapt;
 
     public void setData(List<Breeds> breedsToAdapt) {
         // This is basically a Setter that we use to give data to the adapter
@@ -24,7 +24,7 @@ public class searchadapter extends RecyclerView.Adapter<searchadapter.searchView
 
     @NonNull
     @Override
-    public searchadapter.searchViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SearchResultAdapter.searchViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view =
                 LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.cat, parent, false);
@@ -33,42 +33,42 @@ public class searchadapter extends RecyclerView.Adapter<searchadapter.searchView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull searchadapter.searchViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull SearchResultAdapter.searchViewHolder holder, final int position) {
         final Breeds breedsatposition = breedsToAdapt.get(position);
-      //  System.out.println(breedsToAdapt.);
+        //  System.out.println(breedsToAdapt.);
         holder.textView.setText(breedsatposition.getName());
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
 
-                Intent intent = new Intent(context, catdetail.class);
+                Intent intent = new Intent(context, Catdetail.class);
                 intent.putExtra("breedsid", breedsToAdapt.get(position).getId());
                 context.startActivity(intent);
 
             }
         });
     }
+
     @Override
     public int getItemCount() {
-        return  breedsToAdapt.size();
+        return breedsToAdapt.size();
     }
 
 
-       public static  class searchViewHolder extends RecyclerView.ViewHolder {
+    public static class searchViewHolder extends RecyclerView.ViewHolder {
 
-            public View view;
-            public TextView textView;
-            public ConstraintLayout constraintLayout;
+        public View view;
+        public TextView textView;
+        public ConstraintLayout constraintLayout;
 
-            public searchViewHolder(@NonNull View v) {
-                super(v);
-                view = v;
-                textView = v.findViewById(R.id.catnamee);
-                constraintLayout = v.findViewById(R.id.layout);
-            }
+        public searchViewHolder(@NonNull View v) {
+            super(v);
+            view = v;
+            textView = v.findViewById(R.id.catnamee);
+            constraintLayout = v.findViewById(R.id.layout);
         }
-
+    }
 
 
 }

@@ -38,10 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (menuItem.getItemId() == R.id.fav) {
                     Fragment fragment2 = new fragment2();
                     swapFragment(fragment2);
-//                    Bundle bundle = new Bundle();
-//                    bundle.putString("param1", "First Argument");
-//                    bundle.putString("param2", "Second Argument");
-                   // fragment2.setArguments(bundle);
+//
                     swapFragment(fragment2);
                     return true;
                 }

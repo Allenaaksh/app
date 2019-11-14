@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class fragment2 extends Fragment {
     private RecyclerView recyclerView;
-    ArrayList<Catimage> objectList1=catdetail.list1;
+    ArrayList<Catimage> objectList1= Catdetail.list1;
     //public static List<Breeds> objectList;
 
     //List<Breeds> breeds1;
@@ -23,7 +23,7 @@ public class fragment2 extends Fragment {
         recyclerView = view.findViewById(R.id.recycle2);
         LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());
         recyclerView.setLayoutManager(layoutManager);
-        favouriteadapter favouriteadapter = new favouriteadapter();
+        FavouriteAdapter favouriteadapter = new FavouriteAdapter();
         favouriteadapter.setData(objectList1);
         recyclerView.setAdapter(favouriteadapter);
 
