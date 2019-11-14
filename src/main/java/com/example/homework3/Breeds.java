@@ -1,11 +1,9 @@
 package com.example.homework3;
 
-import androidx.annotation.NonNull;
 
 
 public class Breeds {
 
-    @NonNull
     private String id;
     private String name;
     private String temperament;
@@ -13,7 +11,6 @@ public class Breeds {
     public weight getResult() {
         return weight;
     }
-
     public void setResult(weight weight) {
         this.weight = weight;
     }
@@ -53,7 +50,7 @@ public class Breeds {
         return id;
     }
 
-    public void setId(@NonNull String id) {
+    public void setId( String id) {
         this.id = id;
     }
 
